@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscketball</title>
+    <!-- tailwend css -->
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- daisy ui -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body{
+            margin: 0;
+
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="bg-[#000]  relative py-[150px]  flex  items-center justify-center">
+            <img src="./image/player-t.png" class="absolute bottom-0 left-0" alt="">
+            <div class=" flex flex-col items-center justify-center ">
+                <h1 class="text-sky-400 text-center font-bold text-[50px]">Choose your Favourite <br> Five</h1>
+                <img src="./image/underline-1.png" alt="">
+                <p class="text-white font-bold text-center ">Welcome to Hockey world.You can choice <br> your favourite five players, and calculate <br>your budget</p>
+                
+            </div>
+            <img src="./image/player2-t.png" class="absolute top-22 right-37 z-[1]" alt="">
+            <img src="./image/ball.png"  class="absolute bottom-0 right-0 roounded-tr-full" alt="">
+        </div>
+    </section>
+    <section>
+    <div class=" flex px-[15px] bg-blue-950 pt-[100px]">
+       <div id="card-contaoner" class="flex-3 flex flex-wrap justify-center items-center">
+            
+            
+           
+            
+
+       </div>
+       <div class="flex-1">
+        <div class="flex  items-center justify-center flex-col border-2 border-white w-[400px] p-5">
+            <div>
+                <h1 class="text-white text-[35px] font-bold ">Selected-V</h1>
+                <img src="./image/underline-2.png"  class="w-[200px] h-auto">
+            </div>
+            <span class="text-white text-2xl font-bold">Player Name</span>
+            <ul id="selected_ul" class="grid md:pl-5 text-2xl font-semibold">
+               
+            </ul>
+        </div>
+        <div class="flex items-center mt-[50px] justify-center flex-col border-2 border-white w-[400px] p-5">
+            <div class="flex items-center justify-center flex-col">
+            <h1 class="text-white text-[35px] font-bold ">Budget</h1>
+            <img src="./image/underline-2.png"  class="w-[200px] h-auto">
+            </div>
+            <div class="flex items-center justify-center flex-row mt-[20px] ">
+              <p class="mr-3 text-neutral-400 text-[20px]">Per Player</p>  <input type="number" value="1000" name="" class="bg-white px-[15px] py-[8px] rounded-full" id="perPlayer">
+            </div>
+            <button class="px-[100px] text-white text-[20px] mt-[20px] font-bold py-[14px] bg-orange-500 rounded-full" onclick="calculate()" id="Calculate">Calculate</button>
+            <div class="flex items-center mt-[20px] justify-center flex-row ">
+                <P class="text-[20px] text-white  font-bold">player Expences:</P> <p class="text-[20px] text-white font-bold">$</p> <p class="text-[20px] text-white font-bold" id="playex">00</p>
+            </div>
+            <div class="flex items-center justify-center mt-[20px] flex-row ">
+              <p class="mr-3 text-neutral-400 text-[20px]">Manager</p>  <input type="number" placeholder="Budget here" name="" class="bg-white px-[15px] py-[8px] rounded-full" id="manager"  value="0">
+            </div>
+            <div class="flex items-center mt-[20px] justify-center flex-row ">
+              <p class="mr-3 text-neutral-400 text-[20px]">Coach</p>  <input type="number" placeholder="Budget here" name="" class="bg-white px-[15px] py-[8px] rounded-full" id="coach" value="0">
+            </div>
+           <button class="px-[100px] mt-[20px] text-white text-[20px] font-bold py-[14px] bg-orange-500 rounded-full" onclick="cacl()" id="calculateTotal">Calculate Total</button>
+            <div class="flex items-center mt-[20px] justify-center flex-row ">
+                <P class="text-[20px] text-white mr-[30px] font-bold">Total:</P> <p class="text-[20px] text-orange-500 font-bold">$</p> <p class="text-[20px] text-orange-500 font-bold" id="Total">00</p>
+            </div>
+
+        </div>
+       </div>
+    </div>
+    </section>
+    <footer class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4">
+  <aside>
+    <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
+  </aside>
+    </footer>
+
+    <script src="./JS/script.js"></script>
+</body>
+</html>
